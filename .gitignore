@@ -1,0 +1,12 @@
+# Ignore a file
+config.json
+
+# Ignore a directory
+temp/
+
+# Ignore all .log files
+*.log
+
+# Ignore a specific file type in a specific folder
+temp/*.log
+cmake-build-debug/
