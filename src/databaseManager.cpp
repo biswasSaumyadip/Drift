@@ -20,7 +20,9 @@ Database *DatabaseManager::getDatabase(const std::string& db) {
 
 void DatabaseManager::createDB(const std::string &dbName) {
     if (getDatabase(dbName) == nullptr) {
-        std::ofstream file(dbPath.append("/").append(dbName));
+        const std::string filePath = dbPath + "/" + dbName + ".csv";
+
+        std::ofstream file(filePath);
         file.close();
         log(Color::GREEN, "Creating database " + dbName + "...");
         loadDatabases();

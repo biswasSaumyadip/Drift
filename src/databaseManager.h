@@ -13,6 +13,8 @@ struct Database {
     std::unordered_map<std::string, std::string> kvStore;
     std::string dbFilePath;
 
+    Database() = default;
+
     Database(std::string dbFilePath,
              const std::unordered_map<std::string, std::string> &
              kvStoreFilePath): kvStore(kvStoreFilePath), dbFilePath(std::move(dbFilePath)) {
